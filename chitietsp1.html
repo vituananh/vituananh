@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chi tiet tung san pham</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="trangchu.css">
+    <script>
+        function increaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        }
+
+        function decreaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            if (parseInt(quantityInput.value) > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        }
+
+        function selectSize(sizeButton) {
+            const allSizeButtons = document.querySelectorAll('.size button');
+            allSizeButtons.forEach(button => button.classList.remove('selected'));
+            sizeButton.classList.add('selected');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="Trangchu.html"><img src="imgs/fonden.png" alt="logo" width="100px"></a>
+            </div>
+            <div class="search">
+                <form action="">
+                    <input type="search" name="s" placeholder="bạn cần tìm gì...">
+                    <input type="submit" value="tìm kiếm">
+                </form>
+            </div>
+            <div class="user-actions">
+               <a href="#"><i class="fa-solid fa-user"></i></a>
+               <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="clearfix"></div>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="Trangchu.html"><h3><i class="fa-solid fa-house"></i>Trang chủ</h3></a></li>
+                    <li><a href="sanpham.html">Sản phẩm</a></li>
+                    <li><a href="theloai.html">Thể loại</a></li>
+                    <li><a href="tintuc.html">Tin tức</a></li>
+                    <li><a href="vitri.html">Giới thiệu</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="container-ct">
+        <div class="product-detail">
+            <div class="main-image">
+                <img src="imgs/sp1.webp" alt="Product Image">
+                <div class="thumbnail-images">
+                    <img src="imgs/sp1-ct2.webp" alt="Thumbnail 1">
+                    <img src="imgs/sp1-ct3.webp" alt="Thumbnail 2">
+                    <img src="imgs/sp1-ct4.webp" alt="Thumbnail 3">
+                </div>
+            </div>
+            <div class="details">
+                <h1>Giày thời trang adidas GRAND COURT Nữ - GW9214</h1>
+                <p class="price">Giá: 2.000k</p>
+                <div class="quantity">
+                    <label for="quantity">Số lượng:</label>
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+                <div class="size">
+                    <label for="size">Size:</label>
+                    <button onclick="selectSize(this)">38</button>
+                    <button onclick="selectSize(this)">39</button>
+                    <button onclick="selectSize(this)">40</button>
+                    <button onclick="selectSize(this)">41</button>
+                </div>
+                <div class="buttons">
+                    <a href=""><button class="buy-now">Mua ngay</button></a>
+                    <a href=""><button class="add-to-cart">Thêm vào giỏ hàng</button></a>
+                </div>
+                <div class="description">
+                    <h2>Mô tả sản phẩm</h2>
+                    <p>ĐẶC ĐIỂM NỔI BẬT
+
+                        Dáng regular fit
+                        Có dây giày
+                        Thân giày bằng da tổng hợp
+                        Lót giày Cloudfoam Comfort
+                        Lớp lót bằng vải dệt
+                        Đế ngoài bằng cao su
+                        Thân giày có chứa tối thiểu 50% thành phần tái chế
+                        Màu sản phẩm: Cloud White / Core Black / Core Black
+                        Mã sản phẩm: GW9214</p>
+                    <p>Có những thứ nổi lên như xu hướng, bên cạnh đó cũng có những thứ kinh điển. Sức ảnh hưởng của đôi giày sneaker adidas Grand Court này không chỉ ở mỗi sân quần vợt và sàn catwalk. Giờ thì, không có tủ đồ nào hoàn chỉnh mà thiếu chúng được. Lớp đệm Cloudfoam thoải mái mang lại cảm giác ôm chân và nâng đỡ, cùng kiểu dáng cổ điển phù hợp với mọi outfit.
+
+                        Làm từ một nhóm chất liệu tái chế, thân giày có chứa tối thiểu 50% thành phần tái chế. Sản phẩm này đại diện cho một trong số rất nhiều các giải pháp của adidas hướng tới chấm dứt rác thải nhựa.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="left">
+        <img src="imgs/fontrang.png" alt="logo web" width="100px" height="100px">
+        <h3>Địa chỉ</h3>
+        <p>182 Lê Duẩn thành phố Vinh Nghệ An <br>trường đại học vinh</p><br>
+        </div>
+        <div class="middle">
+            <p>vui lòng diền email để nhận thông báo từ cửa hàng</p>
+            <input type="address" name="add" placeholder="vui lòng điền emial">
+            <input type="submit" value="gửi">
+        </div>
+        <div class="right">
+        <h3>Liên hệ</h3>
+        <p>Email:<a href="mailto:vitiuananh.qp2004@gmail.com">vituananh.qp2004@gmail.com</a></p>
+        <p>Điện thoại:<a href="tel:0332382174">0332382174</a></p>
+        </div>
+</footer>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
+</body>
+</html>
